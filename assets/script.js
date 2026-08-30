@@ -57,3 +57,59 @@
     });
   }
 })();
+
+/* ---- sélecteur de besoin (accueil) ----
+   Le formulaire fonctionne sans script : il envoie ?besoin=… vers contact.html.
+   Le script ne fait qu'ajouter le retour visuel et activer le bouton. */
+(function(){
+  'use strict';
+  var form = document.getElementById('besoinForm');
+  if(!form) return;
+  var btn  = document.getElementById('besoinBtn');
+  var note = document.getElementById('besoinNote');
+  var cartes = form.querySelectorAll('.besoin-card');
+
+  form.addEventListener('change', function(e){
+    if(e.target.name !== 'besoin') return;
+    cartes.forEach(function(c){ c.classList.toggle('is-checked', c.contains(e.target)); });
+    btn.disabled = false;
+    btn.firstChild.nodeValue = 'Continuer — ' + e.target.getAttribute('data-label') + ' ';
+    note.textContent = 'Nous préparerons votre message avec cette information.';
+  });
+})();
+
+/* ---- page contact : reprise du besoin choisi ---- */
+(function(){
+  'use strict';
+  var rappel = document.getElementById('besoinRappel');
+  if(!rappel) return;
+
+  var TEXTES = {
+    'developpement-logiciel': ['Développement logiciel',
+      'Nous souhaitons faire développer un logiciel ou une application.'],
+    'audit-it': ['Audit IT',
+      'Nous souhaitons un état des lieux de notre système d\'information.'],
+    'staffing-formation': ['Staffing & formation',
+      'Nous cherchons des compétences IT pour renforcer notre équipe.'],
+    'cybersecurite-reseau': ['Cybersécurité & réseau',
+      'Nous souhaitons sécuriser nos systèmes et notre réseau.'],
+    'gestion-de-projet': ['Gestion de projet',
+      'Nous avons un projet à piloter, ou un projet en difficulté.'],
+    'appels-offres': ['Appels d\'offres',
+      'Nous préparons une consultation ou un appel d\'offres et souhaitons vous transmettre le dossier.'],
+    'autre': ['Autre besoin', 'Nous souhaitons échanger sur notre situation.']
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var choix = params.get('besoin');
+  if(!choix || !TEXTES[choix]) return;
+
+  document.getElementById('besoinRappelTexte').textContent = TEXTES[choix][0];
+  rappel.classList.add('show');
+
+  var message = document.getElementById('f-message');
+  if(message && !message.value){
+    message.value = TEXTES[choix][1] + '\n\n';
+    message.setAttribute('placeholder', 'Décrivez votre contexte en quelques lignes — même imparfaitement.');
+  }
+})();
