@@ -486,3 +486,13 @@ footer.site{background:var(--indigo); color:var(--white); padding:64px 0 32px;}
 @media (prefers-reduced-motion: reduce){
   .c-siege .halo{animation:none; opacity:.2;}
 }
+
+/* bascule de langue */
+.lang-switch{
+  font-family:var(--font-mono); font-size:.74rem; letter-spacing:.06em; color:var(--slate);
+  padding:8px 12px; border:1px solid var(--border); border-radius:var(--radius); background:var(--white);
+  transition:color .2s, border-color .2s;
+  white-space:nowrap;
+}
+.lang-switch:hover{color:var(--indigo); border-color:var(--indigo);}
+@media (max-width:520px){.lang-switch{font-size:.7rem; padding:7px 9px;}}
