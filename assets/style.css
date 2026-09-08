@@ -506,3 +506,30 @@ footer.site{background:var(--indigo); color:var(--white); padding:64px 0 32px;}
 .confirm-msg a{text-decoration:underline; text-underline-offset:3px;}
 #envoiBtn[disabled]{opacity:.55; cursor:progress;}
 #envoiBtn[disabled]:hover{background:var(--copper); transform:none;}
+
+/* ============ BANNIÈRE PARTAGÉE ============
+   Le héros typographique reste intact à gauche ; la carte occupe la droite,
+   sans voile ni recadrage — chacun garde sa lisibilité. */
+.hero-split{
+  display:grid; grid-template-columns:1.02fr .98fr; gap:52px; align-items:center;
+  max-width:var(--container); margin:0 auto; padding:0 24px; position:relative;
+}
+.hero-media{margin:0;}
+.hero-media .carte{width:100%; height:auto; display:block;}
+.hero-media figcaption{
+  font-family:var(--font-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--slate); margin-top:12px; text-align:center;
+}
+@media (max-width:900px){
+  .hero-split{grid-template-columns:1fr; gap:32px;}
+  .hero-media{order:2;}
+  .hero-media figcaption{text-align:left;}
+}
+
+/* Sur petit écran, les libellés de la carte tomberaient sous 6 px : on les
+   retire. Les points restent, et la légende sous la carte porte l'information. */
+@media (max-width:700px){
+  .c-noms, .c-siege text{display:none;}
+  .c-villes circle{r:5;}
+  .c-siege .halo{opacity:.28;}
+}
