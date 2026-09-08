@@ -68,7 +68,7 @@ personnelle.
 ## 5. Site web
 
 ```
-https://www.navorgroup.tg
+https://navorgroup.net
 ```
 
 À ne renseigner **qu'une fois le domaine en ligne**. Un lien mort dans la fiche

@@ -53,7 +53,7 @@
         'Message:\n' + message
       );
       if(confirmMsg){ confirmMsg.classList.add('show'); }
-      window.location.href = 'mailto:contact@navorgroup.tg?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:contact@navorgroup.net?subject=' + subject + '&body=' + body;
     });
   }
 })();

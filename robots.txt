@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.navorgroup.tg/sitemap.xml
+Sitemap: https://navorgroup.net/sitemap.xml

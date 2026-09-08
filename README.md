@@ -47,7 +47,7 @@ dans le bloc `:root` — les modifier là les change sur tout le site.
       À brancher sur un vrai service d'envoi pour que les messages arrivent directement.
 - [ ] Photos des fondateurs (actuellement : initiales sur pastille indigo)
 - [ ] Liens réseaux sociaux (LinkedIn), si souhaité
-- [ ] Brancher le domaine navorgroup.tg
+- [ ] Brancher le domaine navorgroup.net
 
 ## Validation
 
