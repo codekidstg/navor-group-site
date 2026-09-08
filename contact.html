@@ -76,7 +76,12 @@
       </div>
 
       <div class="contact-grid">
-        <form id="contactForm">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" id="f-cle" value="">
+          <input type="hidden" name="subject" id="f-sujet" value="Nouveau message depuis navorgroup.net">
+          <input type="hidden" name="from_name" value="Site NAVOR GROUP">
+          <input type="hidden" name="besoin" id="f-besoin" value="">
+          <input type="checkbox" name="botcheck" class="pot-de-miel" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="besoin-rappel" id="besoinRappel">
             <div>
               <span class="block-label">Votre demande</span>
@@ -99,9 +104,9 @@
             <label for="f-message">Votre message</label>
             <textarea id="f-message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Envoyer le message</button>
-          <p class="form-note">En envoyant, votre messagerie s'ouvrira avec le message pré-rempli, à l'attention de NAVOR GROUP.</p>
-          <div class="confirm-msg" id="confirmMsg">Votre messagerie va s'ouvrir avec le message prêt à être envoyé. Si rien ne se passe, écrivez-nous directement à l'adresse ci-contre.</div>
+          <button type="submit" class="btn btn-primary" id="envoiBtn">Envoyer le message</button>
+          <p class="form-note">Nous répondons personnellement, généralement sous deux jours ouvrés. Vous pouvez aussi écrire directement à <a href="mailto:contact@navorgroup.net">contact@navorgroup.net</a>.</p>
+          <div class="confirm-msg" id="confirmMsg" role="status" aria-live="polite"></div>
         </form>
 
         <div class="contact-info">

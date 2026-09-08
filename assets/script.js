@@ -37,25 +37,96 @@
     blocks.forEach(function(b){ io.observe(b); });
   }
 
-  // ---- formulaire de contact -> ouverture de la messagerie ----
+  // ---- formulaire de contact ----
+  //
+  //  POUR ACTIVER L'ENVOI RÉEL : coller la clé d'accès ci-dessous.
+  //  Elle s'obtient gratuitement sur https://web3forms.com en saisissant
+  //  l'adresse contact@navorgroup.net — la clé arrive par email.
+  //  Tant que la clé est vide, le formulaire ouvre la messagerie du visiteur
+  //  comme avant : le site reste utilisable, rien n'est cassé.
+  //
+  var CLE_FORMULAIRE = '';
+  var DESTINATAIRE   = 'contact@navorgroup.net';
+
   var form = document.getElementById('contactForm');
   var confirmMsg = document.getElementById('confirmMsg');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var val = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
-      var name = val('f-name'), email = val('f-email'), org = val('f-org'), message = val('f-message');
-      var subject = encodeURIComponent('Contact site — ' + name);
-      var body = encodeURIComponent(
-        'Nom: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Structure: ' + (org || '—') + '\n\n' +
-        'Message:\n' + message
-      );
-      if(confirmMsg){ confirmMsg.classList.add('show'); }
-      window.location.href = 'mailto:contact@navorgroup.net?subject=' + subject + '&body=' + body;
-    });
+  var envoiBtn = document.getElementById('envoiBtn');
+  if(!form) return;
+
+  function valeur(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+
+  function afficher(texte, etat){
+    if(!confirmMsg) return;
+    confirmMsg.innerHTML = texte;
+    confirmMsg.classList.remove('is-succes', 'is-erreur');
+    confirmMsg.classList.add('show', etat);
   }
+
+  // Repli sans clé : on ouvre la messagerie du visiteur, comme auparavant.
+  function replMessagerie(){
+    var sujet = encodeURIComponent('Contact site — ' + valeur('f-name'));
+    var corps = encodeURIComponent(
+      'Nom: ' + valeur('f-name') + '\n' +
+      'Email: ' + valeur('f-email') + '\n' +
+      'Structure: ' + (valeur('f-org') || '—') + '\n\n' +
+      'Message:\n' + valeur('f-message')
+    );
+    afficher('Votre messagerie va s\'ouvrir avec le message prêt à être envoyé. ' +
+             'Si rien ne se passe, écrivez-nous à <a href="mailto:' + DESTINATAIRE + '">' +
+             DESTINATAIRE + '</a>.', 'is-succes');
+    window.location.href = 'mailto:' + DESTINATAIRE + '?subject=' + sujet + '&body=' + corps;
+  }
+
+  var cle = document.getElementById('f-cle');
+  if(cle) cle.value = CLE_FORMULAIRE;
+
+  // Le sujet reprend le nom, pour repérer les messages d'un coup d'œil.
+  form.addEventListener('input', function(){
+    var sujet = document.getElementById('f-sujet');
+    if(sujet && valeur('f-name')) sujet.value = 'Site NAVOR GROUP — ' + valeur('f-name');
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+
+    if(!CLE_FORMULAIRE){ replMessagerie(); return; }
+
+    var libelle = envoiBtn ? envoiBtn.textContent : '';
+    if(envoiBtn){ envoiBtn.disabled = true; envoiBtn.textContent = 'Envoi en cours…'; }
+    afficher('Envoi en cours…', 'is-succes');
+
+    var donnees = {};
+    new FormData(form).forEach(function(v, k){ donnees[k] = v; });
+    donnees.replyto = valeur('f-email');
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify(donnees)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if(res.success){
+        form.reset();
+        var rappel = document.getElementById('besoinRappel');
+        if(rappel) rappel.classList.remove('show');
+        afficher('<strong>Message envoyé.</strong> Nous vous répondons personnellement, ' +
+                 'généralement sous deux jours ouvrés.', 'is-succes');
+      } else {
+        throw new Error(res.message || 'envoi refusé');
+      }
+    })
+    .catch(function(){
+      afficher('<strong>L\'envoi a échoué.</strong> Vérifiez votre connexion, ou écrivez-nous ' +
+               'directement à <a href="mailto:' + DESTINATAIRE + '">' + DESTINATAIRE + '</a> — ' +
+               'votre message n\'est pas perdu, il est encore dans le formulaire.', 'is-erreur');
+    })
+    .then(function(){
+      if(envoiBtn){ envoiBtn.disabled = false; envoiBtn.textContent = libelle; }
+    });
+  });
+
 })();
 
 /* ---- sélecteur de besoin (accueil) ----
@@ -106,6 +177,10 @@
 
   document.getElementById('besoinRappelTexte').textContent = TEXTES[choix][0];
   rappel.classList.add('show');
+
+  // le besoin choisi doit aussi partir dans le message, pas seulement s'afficher
+  var champ = document.getElementById('f-besoin');
+  if(champ) champ.value = TEXTES[choix][0];
 
   var message = document.getElementById('f-message');
   if(message && !message.value){

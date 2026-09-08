@@ -496,3 +496,13 @@ footer.site{background:var(--indigo); color:var(--white); padding:64px 0 32px;}
 }
 .lang-switch:hover{color:var(--indigo); border-color:var(--indigo);}
 @media (max-width:520px){.lang-switch{font-size:.7rem; padding:7px 9px;}}
+
+/* champ-piège anti-robot : invisible pour un humain, rempli par les robots */
+.pot-de-miel{position:absolute; left:-9999px; width:0; height:0; opacity:0;}
+
+/* états du message de confirmation */
+.confirm-msg.is-succes{background:rgba(180,113,60,.1); border-color:var(--copper);}
+.confirm-msg.is-erreur{background:#fdf1ef; border-color:#c0392b; color:#8e2a1e;}
+.confirm-msg a{text-decoration:underline; text-underline-offset:3px;}
+#envoiBtn[disabled]{opacity:.55; cursor:progress;}
+#envoiBtn[disabled]:hover{background:var(--copper); transform:none;}
