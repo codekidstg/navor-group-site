@@ -45,7 +45,7 @@
   //  Tant que la clé est vide, le formulaire ouvre la messagerie du visiteur
   //  comme avant : le site reste utilisable, rien n'est cassé.
   //
-  var CLE_FORMULAIRE = '';
+  var CLE_FORMULAIRE = 'd96d661d-fb3d-49dd-8df6-42e33d9c7b60';
   var DESTINATAIRE   = 'contact@navorgroup.net';
 
   var form = document.getElementById('contactForm');
