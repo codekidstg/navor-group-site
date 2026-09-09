@@ -32,6 +32,47 @@ Puis ouvrir http://localhost:4300
 | `assets/*.svg` `*.png` | Logos |
 | `sitemap.xml` `robots.txt` | Référencement |
 
+## Publier un article
+
+Créer un fichier dans `contenu/articles/`, par exemple `mon-sujet.txt` :
+
+```
+titre: Le titre de l'article
+description: La phrase que Google affichera sous le titre.
+chapeau: L'accroche affichée en haut de la page.
+date: 2026-09-15
+---
+<p>Le corps de l'article, en HTML simple.</p>
+<h2>Un intertitre</h2>
+<p>La suite.</p>
+```
+
+Puis :
+
+```bash
+python3 outils/publier.py
+```
+
+La page de l'article, la liste `articles.html` et le `sitemap.xml` sont
+régénérés. Le nom du fichier devient l'adresse de la page — le choisir court
+et descriptif, il compte pour le référencement.
+
+## Modifier le menu ou le pied de page
+
+Ils ne sont écrits qu'une seule fois, dans `gabarit/entete.html` et
+`gabarit/pied.html`. Après modification :
+
+```bash
+python3 outils/gabarit.py
+```
+
+L'outil les recopie dans les dix-sept pages, en adaptant les chemins des
+sous-dossiers et en marquant l'entrée de menu active. Il ne touche à rien
+d'autre.
+
+**Ne pas modifier l'en-tête ou le pied directement dans une page** : le
+prochain passage de l'outil écraserait la modification.
+
 ## Modifier un texte
 
 Tous les textes sont directement dans les fichiers `.html`, en clair. Pour corriger une
@@ -48,6 +89,16 @@ dans le bloc `:root` — les modifier là les change sur tout le site.
 - [ ] Photos des fondateurs (actuellement : initiales sur pastille indigo)
 - [ ] Liens réseaux sociaux (LinkedIn), si souhaité
 - [ ] Brancher le domaine navorgroup.net
+- [ ] **Mesure d'audience** : coller le jeton Cloudflare Web Analytics en tête de
+      `assets/script.js`, puis remplacer la section « Cookies et mesure d'audience »
+      de `mentions-legales.html` par le texte ci-dessous.
+
+  > Ce site ne dépose aucun cookie et n'utilise aucun outil de publicité ou de
+  > profilage. Une mesure d'audience sans cookie est en place : elle comptabilise
+  > les pages consultées et la provenance des visites, sans identifiant individuel.
+  > Elle ne permet ni de vous reconnaître d'une visite à l'autre, ni de vous suivre
+  > sur d'autres sites. Les polices de caractères sont hébergées sur le serveur du
+  > site : aucune autre connexion à un service tiers n'a lieu.
 
 ## Validation
 

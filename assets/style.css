@@ -579,3 +579,27 @@ nav.primary a{white-space:nowrap; padding:10px 12px;}
 /* situation concrète, au milieu de chaque carte de valeur */
 .value-card .situation{padding:18px 0 0; border-top:1px solid var(--border); margin-bottom:22px;}
 .value-card .situation p{color:var(--slate); font-size:.92rem;}
+
+/* ============ ARTICLES ============ */
+.article-corps{max-width:680px;}
+.article-corps p{color:var(--slate); font-size:1.02rem; line-height:1.68; margin-bottom:20px;}
+.article-corps h2{font-size:1.35rem; margin:44px 0 16px;}
+.article-corps h2:first-child{margin-top:0;}
+.article-corps strong{color:var(--indigo); font-weight:600;}
+.article-corps em{font-style:italic;}
+.article-corps ul{display:grid; gap:10px; margin:0 0 20px;}
+.article-corps li{color:var(--slate); font-size:1.02rem; display:flex; gap:10px;}
+.article-corps li::before{content:"—"; color:var(--copper); flex-shrink:0;}
+.article-corps a{text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--border);}
+.article-corps a:hover{color:var(--copper); text-decoration-color:var(--copper);}
+
+.article-liste{display:grid; gap:1px; background:var(--border); border:1px solid var(--border);}
+.article-item{background:var(--white); padding:32px 30px; display:block; transition:background .2s var(--ease);}
+.article-item:hover{background:var(--cream);}
+.article-date{font-family:var(--font-mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--copper); display:block; margin-bottom:12px;}
+.article-item h2{font-size:1.3rem; margin-bottom:10px; max-width:44ch;}
+.article-item p{color:var(--slate); font-size:.96rem; margin-bottom:18px; max-width:70ch;}
+.article-item .go{font-size:.85rem; font-weight:600; color:var(--indigo); display:inline-flex; align-items:center; gap:7px;}
+.article-item .go svg{width:13px; height:13px; transition:transform .2s;}
+.article-item:hover .go{color:var(--copper);}
+.article-item:hover .go svg{transform:translateX(3px);}

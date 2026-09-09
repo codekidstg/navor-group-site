@@ -1,4 +1,28 @@
 /* NAVOR GROUP — comportements partagés : menu mobile, suivi de méthode, formulaire. */
+
+/* ---- mesure d'audience ----
+ *
+ *  POUR L'ACTIVER : coller le jeton ci-dessous.
+ *  Il s'obtient gratuitement sur Cloudflare Web Analytics
+ *  (dash.cloudflare.com → Analytics → Web Analytics → Add a site).
+ *  Sans cookie, sans identifiant individuel, sans bandeau de consentement.
+ *
+ *  IMPORTANT : le jour où vous renseignez ce jeton, il faut mettre à jour
+ *  la section « Cookies et mesure d'audience » des mentions légales, qui
+ *  affirme aujourd'hui qu'aucun outil de mesure n'est utilisé. Le texte de
+ *  remplacement est prêt dans README.md.
+ */
+(function(){
+  'use strict';
+  var JETON_AUDIENCE = '';
+  if(!JETON_AUDIENCE) return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', JSON.stringify({token: JETON_AUDIENCE}));
+  document.head.appendChild(s);
+})();
+
 (function(){
   'use strict';
 

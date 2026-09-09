@@ -1,0 +1,44 @@
+titre: Développer sur mesure ou acheter une solution : comment trancher
+description: Les quatre questions qui déterminent s'il faut développer un logiciel sur mesure ou adopter une solution existante, et les coûts que chacune des deux voies cache.
+chapeau: Les deux choix sont défendables, et le mauvais coûte des années. Voici les quatre questions qui tranchent réellement, et ce que chaque voie vous coûtera sans le dire.
+date: 2026-09-05
+---
+<p>Nous développons des logiciels sur mesure. Il nous arrive pourtant de le déconseiller, et c'est souvent le conseil le plus utile que nous donnons dans un premier rendez-vous. Voici comment nous instruisons la question.</p>
+
+<h2>Le réflexe qui coûte cher</h2>
+
+<p>Beaucoup d'organisations partent sur du sur-mesure parce qu'aucune solution du marché ne coche <em>toutes</em> les cases. C'est un mauvais critère : aucune ne les cochera jamais toutes. La vraie question n'est pas « est-ce que ça correspond exactement ? », mais « est-ce que ce qui manque justifie de construire, de maintenir et de faire évoluer un logiciel pendant dix ans ? ».</p>
+
+<p>Le réflexe inverse existe aussi : adopter une solution du marché parce qu'elle est moins chère à l'achat, puis passer trois ans à tordre ses processus pour entrer dans un moule conçu pour un autre pays et un autre métier.</p>
+
+<h2>Les quatre questions qui tranchent</h2>
+
+<p><strong>1. Ce que vous faites est-il votre avantage, ou une fonction support ?</strong> La paie, la comptabilité, la messagerie sont des fonctions support : elles se font comme partout, et une solution existante fera l'affaire. En revanche, ce qui vous distingue de vos concurrents — votre façon de traiter un dossier, votre logique tarifaire, votre relation client — ne se trouve dans aucun catalogue. C'est là que le sur-mesure se justifie.</p>
+
+<p><strong>2. Une solution existante couvre-t-elle au moins 80 % du besoin ?</strong> En dessous, l'adaptation coûtera plus cher qu'un développement. Au-dessus, prenez-la et adaptez vos processus pour les 20 % restants — la plupart du temps, ces écarts sont des habitudes plutôt que des nécessités.</p>
+
+<p><strong>3. Le besoin va-t-il bouger ?</strong> Un processus stable depuis dix ans supporte très bien un outil rigide. Un métier qui change tous les six mois se retrouvera prisonnier d'un éditeur dont la feuille de route n'est pas la vôtre.</p>
+
+<p><strong>4. Que se passe-t-il si le fournisseur disparaît ?</strong> Question rarement posée, et pourtant décisive quand l'outil porte vos données clients ou votre facturation. Avec une solution du marché, vous dépendez de la survie d'un éditeur. Avec du sur-mesure, vous détenez le code — à condition de l'avoir exigé au contrat.</p>
+
+<h2>Ce que le sur-mesure coûte, et qu'on oublie</h2>
+
+<p>Le développement initial n'est pas la dépense principale. Un logiciel vit, et il faut prévoir sa <strong>maintenance</strong> : corriger les défauts, suivre les mises à jour de sécurité, s'adapter quand un système voisin change. Une règle prudente consiste à provisionner chaque année une fraction du coût de construction pour le maintenir en état.</p>
+
+<p>Il faut aussi prévoir la <strong>dépendance aux personnes</strong>. Un logiciel sur mesure dont une seule personne connaît le fonctionnement est un risque, pas un actif. C'est pourquoi nous documentons et formons systématiquement : la transmission n'est pas une politesse de fin de mission, c'est ce qui rend le sur-mesure défendable.</p>
+
+<h2>Ce que la solution du marché coûte, et qu'on oublie</h2>
+
+<p>Les <strong>licences par utilisateur</strong>, qui augmentent avec vos effectifs, et parfois plus vite que votre chiffre d'affaires. La <strong>facturation en devises</strong>, qui expose une entreprise togolaise aux variations de change sur un poste de dépense permanent. Le <strong>paramétrage</strong>, souvent facturé à part et parfois plus cher que la licence.</p>
+
+<p>Et surtout la <strong>reprise de données</strong> le jour où vous voudrez partir. Vérifiez avant de signer que vous pouvez exporter vos données dans un format exploitable — c'est la question qui met le plus mal à l'aise les éditeurs, et c'est pour ça qu'il faut la poser.</p>
+
+<h2>La voie mixte, souvent la bonne</h2>
+
+<p>Dans la pratique, la meilleure réponse est fréquemment un mélange : une solution du marché pour les fonctions support, et un développement ciblé sur ce qui fait votre spécificité, les deux communiquant entre eux.</p>
+
+<p>C'est moins spectaculaire qu'une refonte complète, ça se vend moins bien, et c'est très souvent ce qui coûte le moins cher sur cinq ans.</p>
+
+<h2>Comment décider sans se tromper</h2>
+
+<p>Ne tranchez pas sur une démonstration commerciale. Prenez trois cas réels de votre activité — dont un cas compliqué et un cas qui sort de l'ordinaire — et demandez à voir comment chaque option les traite. Les démonstrations sont toujours faites sur le cas simple ; c'est le cas tordu qui révèle si l'outil tiendra.</p>

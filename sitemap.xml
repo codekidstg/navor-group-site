@@ -14,4 +14,8 @@
   <url><loc>https://navorgroup.net/valeurs.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://navorgroup.net/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://navorgroup.net/en/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://navorgroup.net/articles.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://navorgroup.net/articles/cahier-des-charges-informatique.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://navorgroup.net/articles/sur-mesure-ou-solution-du-marche.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://navorgroup.net/articles/questions-prestataire-informatique.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

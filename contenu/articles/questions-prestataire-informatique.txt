@@ -1,0 +1,48 @@
+titre: Cinq questions à poser à un prestataire informatique avant de signer
+description: Cinq questions simples qui révèlent, avant la signature, si un prestataire informatique tiendra ses engagements — et ce que ses réponses doivent contenir.
+chapeau: Ces questions ne demandent aucune compétence technique. Elles suffisent pourtant à écarter la majorité des mauvaises surprises, parce qu'elles portent sur ce qui se passe après la signature.
+date: 2026-08-28
+---
+<p>Nous les posons volontiers à nos propres clients, retournées vers nous. Un prestataire qui se braque sur l'une d'elles vous en apprend plus qu'une plaquette de trente pages.</p>
+
+<h2>1. À qui appartient le code source à la fin ?</h2>
+
+<p>La bonne réponse est : à vous, avec la documentation et les accès. Une réponse évasive — « on vous fournit l'application » — signifie généralement que vous louerez un accès à quelque chose que vous avez pourtant payé.</p>
+
+<p><strong>Ce que la réponse doit contenir :</strong> une clause écrite de cession, la remise du dépôt de code, et les identifiants d'administration. Sans ces trois éléments, changer de prestataire un jour reviendra à tout reconstruire.</p>
+
+<h2>2. Qui exécutera réellement la mission ?</h2>
+
+<p>La personne qui vend n'est pas toujours celle qui livre. Ce n'est pas anormal dans une grande structure, mais vous devez savoir qui interviendra, à quel niveau d'expérience, et si ces personnes travaillent sur d'autres projets en parallèle.</p>
+
+<p><strong>Ce que la réponse doit contenir :</strong> des noms ou au moins des profils, le temps réellement affecté, et le nom de la personne à appeler quand quelque chose ne va pas. Méfiez-vous des références présentées comme faites par « l'équipe » sans que personne ne soit identifiable.</p>
+
+<h2>3. Que se passe-t-il si le besoin change en cours de route ?</h2>
+
+<p>Il changera. C'est la règle, pas l'exception. La question n'est donc pas de savoir si le prestataire l'accepte, mais comment il le traite.</p>
+
+<p><strong>Ce que la réponse doit contenir :</strong> une méthode. Comment l'écart est chiffré, par rapport à quel document de référence, qui décide, et sous quel délai. Une réponse du type « on s'arrangera » est le meilleur prédicteur d'un conflit de facturation. Une réponse du type « tout changement fera l'objet d'un avenant, sans exception » est le meilleur prédicteur d'une relation rigide.</p>
+
+<h2>4. Comment saurai-je que le projet avance ?</h2>
+
+<p>C'est la question qui distingue les prestataires sérieux. Un projet informatique est invisible : rien ne ressemble plus à un logiciel terminé à 90 % qu'un logiciel terminé à 40 %.</p>
+
+<p><strong>Ce que la réponse doit contenir :</strong> un rythme, un format, et surtout quelque chose que vous pouvez <em>manipuler</em>. Un point d'avancement écrit ne suffit pas : vous devez pouvoir essayer une version intermédiaire, même incomplète. Si le premier moment où vous verrez le produit est la livraison finale, refusez.</p>
+
+<h2>5. Que se passe-t-il à la fin de la mission ?</h2>
+
+<p>Beaucoup de projets sont livrés techniquement et échouent humainement : personne, chez le client, ne sait faire fonctionner ce qui a été construit.</p>
+
+<p><strong>Ce que la réponse doit contenir :</strong> une documentation, une formation des personnes concernées, et une période pendant laquelle le prestataire reste joignable. Demandez aussi ce qui est prévu pour la maintenance, et à quel prix — un contrat de maintenance discuté après la livraison se négocie toujours en position de faiblesse.</p>
+
+<h2>La question bonus, qui vaut les cinq autres</h2>
+
+<p><strong>« Dans quel cas nous déconseilleriez-vous ce projet ? »</strong></p>
+
+<p>Un prestataire qui ne trouve aucun cas ne vous a pas écouté, ou ne vous dira jamais non. Celui qui vous répond « si votre besoin change encore dans les trois mois, attendez » ou « si personne chez vous n'a le temps de valider les étapes, ça échouera » vient de vous montrer comment il se comportera quand ça ira mal.</p>
+
+<h2>Et si les réponses vous mettent mal à l'aise</h2>
+
+<p>Faites-les écrire. Pas dans un courriel de confort : dans la proposition commerciale, celle qui sera signée. Un engagement qui refuse d'être écrit n'a jamais existé.</p>
+
+<p>Ces cinq questions ne remplacent pas une évaluation technique, et elles ne garantissent rien. Mais elles coûtent une heure de rendez-vous, et elles vous éviteront la plupart des situations où l'on découvre, six mois plus tard, que ce qui avait été compris n'avait jamais été promis.</p>
